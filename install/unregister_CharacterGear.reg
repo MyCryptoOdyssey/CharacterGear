@@ -1,0 +1,4 @@
+Windows Registry Editor Version 5.00
+
+; Removes CharacterGear from Decal.
+[-HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Decal\Plugins\{A53FCECD-A272-433B-8198-DC8FB7A4E1D4}]

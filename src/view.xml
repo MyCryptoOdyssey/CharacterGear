@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<view title="CharacterGear" icon="11885" width="230" height="194">
+  <control progid="DecalControls.FixedLayout">
+    <control progid="DecalControls.CheckBox" name="chkTrackAll" left="8" top="8" width="214" height="20" text="Track all characters (default)"/>
+    <control progid="DecalControls.CheckBox" name="chkTrackMe" left="8" top="30" width="214" height="20" text="Track this character"/>
+    <control progid="DecalControls.StaticText" name="lblWhy" left="26" top="50" width="196" height="18" text=""/>
+    <control progid="DecalControls.StaticText" name="lblState" left="8" top="72" width="214" height="18" text=""/>
+    <control progid="DecalControls.StaticText" name="lblSaved" left="8" top="90" width="140" height="18" text=""/>
+    <control progid="DecalControls.PushButton" name="btnScan" left="150" top="88" width="72" height="20" text="Rescan me"/>
+    <control progid="DecalControls.PushButton" name="btnRec" left="8" top="114" width="214" height="22" text="Recommended gear"/>
+    <control progid="DecalControls.StaticText" name="lblReadOnly" left="8" top="142" width="214" height="36" text="Each tracked character is read when it logs in (one per game window). Read-only."/>
+  </control>
+</view>

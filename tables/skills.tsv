@@ -1,0 +1,40 @@
+# Skill formulas from stock client_portal.dat SkillTable: formula part = round((attr1 + attr2) / divisor) (attr2 0 = none; x 0 = no formula). Attributes: 1 Str 2 End 3 Quick 4 Coord 5 Focus 6 Self.
+skill_id	name	attr1	attr2	divisor	x
+6	Melee Defense	3	4	3	1
+7	Missile Defense	3	4	5	1
+14	Arcane Lore	5	0	3	1
+15	Magic Defense	6	5	7	1
+16	Mana Conversion	5	6	6	1
+18	Item Tinkering	5	4	2	1
+19	Assess Person	5	0	1	0
+20	Deception	5	0	1	0
+21	Healing	5	4	3	1
+22	Jump	1	4	2	1
+23	Lockpick	4	5	3	1
+24	Run	3	0	1	1
+27	Assess Creature	5	0	1	0
+28	Weapon Tinkering	5	1	2	1
+29	Armor Tinkering	5	2	2	1
+30	Magic Item Tinkering	5	0	1	1
+31	Creature Enchantment	5	6	4	1
+32	Item Enchantment	5	6	4	1
+33	Life Magic	5	6	4	1
+34	War Magic	5	6	4	1
+35	Leadership	2	0	1	0
+36	Loyalty	2	0	1	0
+37	Fletching	4	5	3	1
+38	Alchemy	4	5	3	1
+39	Cooking	4	5	3	1
+40	Salvaging	4	0	1	0
+41	Two Handed Combat	1	4	3	1
+43	Void Magic	5	6	4	1
+44	Heavy Weapons	1	4	3	1
+45	Light Weapons	1	4	3	1
+46	Finesse Weapons	3	4	3	1
+47	Missile Weapons	4	0	2	1
+48	Shield	1	4	2	1
+49	Dual Wield	4	4	3	1
+50	Recklessness	1	3	3	1
+51	Sneak Attack	4	3	3	1
+52	Dirty Fighting	1	4	3	1
+54	Summoning	2	6	3	1

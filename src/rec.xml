@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<view title="CharacterGear - Recommended" icon="11885" width="800" height="400">
+  <control progid="DecalControls.FixedLayout" name="layRoot">
+    <control progid="DecalControls.StaticText" name="lblRecInfo" left="6" top="4" width="680" height="34" text=""/>
+    <control progid="DecalControls.PushButton" name="btnRecRefresh" left="692" top="6" width="100" height="22" text="Refresh"/>
+    <control progid="DecalControls.PushButton" name="btnTabSuit" left="4" top="42" width="84" height="22" text="Your Suit"/>
+    <control progid="DecalControls.PushButton" name="btnTabWeapons" left="92" top="42" width="84" height="22" text="Weapons"/>
+    <control progid="DecalControls.PushButton" name="btnTabArmor" left="180" top="42" width="84" height="22" text="Armor"/>
+    <control progid="DecalControls.PushButton" name="btnTabClothing" left="268" top="42" width="84" height="22" text="Clothing"/>
+    <control progid="DecalControls.PushButton" name="btnTabJewelry" left="356" top="42" width="84" height="22" text="Jewelry"/>
+    <control progid="DecalControls.PushButton" name="btnTabAetheria" left="444" top="42" width="84" height="22" text="Aetheria"/>
+    <control progid="DecalControls.PushButton" name="btnTabEssence" left="532" top="42" width="84" height="22" text="Essence"/>
+    <control progid="DecalControls.PushButton" name="btnTabElements" left="620" top="42" width="84" height="22" text="Elements"/>
+    <control progid="DecalControls.PushButton" name="btnTabSpells" left="708" top="42" width="84" height="22" text="Spells"/>
+    <control progid="DecalControls.List" name="lstSuit" left="2" top="70" width="796" height="326" rowheight="18">
+      <column progid="DecalControls.TextColumn" fixedwidth="150"/>
+      <column progid="DecalControls.TextColumn" fixedwidth="250"/>
+      <column progid="DecalControls.TextColumn" fixedwidth="120"/>
+      <column progid="DecalControls.TextColumn" fixedwidth="270"/>
+    </control>
+    <control progid="DecalControls.List" name="lstWeapons" left="2" top="70" width="796" height="326" rowheight="18">
+      <column progid="DecalControls.TextColumn" fixedwidth="129"/>
+      <column progid="DecalControls.TextColumn" fixedwidth="272"/>
+      <column progid="DecalControls.TextColumn" fixedwidth="143"/>
+      <column progid="DecalControls.TextColumn" fixedwidth="244"/>
+    </control>
+    <control progid="DecalControls.List" name="lstArmor" left="2" top="70" width="796" height="326" rowheight="18">
+      <column progid="DecalControls.TextColumn" fixedwidth="129"/>
+      <column progid="DecalControls.TextColumn" fixedwidth="272"/>
+      <column progid="DecalControls.TextColumn" fixedwidth="143"/>
+      <column progid="DecalControls.TextColumn" fixedwidth="244"/>
+    </control>
+    <control progid="DecalControls.List" name="lstClothing" left="2" top="70" width="796" height="326" rowheight="18">
+      <column progid="DecalControls.TextColumn" fixedwidth="129"/>
+      <column progid="DecalControls.TextColumn" fixedwidth="272"/>
+      <column progid="DecalControls.TextColumn" fixedwidth="143"/>
+      <column progid="DecalControls.TextColumn" fixedwidth="244"/>
+    </control>
+    <control progid="DecalControls.List" name="lstJewelry" left="2" top="70" width="796" height="326" rowheight="18">
+      <column progid="DecalControls.TextColumn" fixedwidth="129"/>
+      <column progid="DecalControls.TextColumn" fixedwidth="272"/>
+      <column progid="DecalControls.TextColumn" fixedwidth="143"/>
+      <column progid="DecalControls.TextColumn" fixedwidth="244"/>
+    </control>
+    <control progid="DecalControls.List" name="lstAetheria" left="2" top="70" width="796" height="326" rowheight="18">
+      <column progid="DecalControls.TextColumn" fixedwidth="129"/>
+      <column progid="DecalControls.TextColumn" fixedwidth="272"/>
+      <column progid="DecalControls.TextColumn" fixedwidth="143"/>
+      <column progid="DecalControls.TextColumn" fixedwidth="244"/>
+    </control>
+    <control progid="DecalControls.List" name="lstEssence" left="2" top="70" width="796" height="326" rowheight="18">
+      <column progid="DecalControls.TextColumn" fixedwidth="114"/>
+      <column progid="DecalControls.TextColumn" fixedwidth="287"/>
+      <column progid="DecalControls.TextColumn" fixedwidth="158"/>
+      <column progid="DecalControls.TextColumn" fixedwidth="229"/>
+    </control>
+    <control progid="DecalControls.List" name="lstElements" left="2" top="70" width="796" height="326" rowheight="18">
+      <column progid="DecalControls.TextColumn" fixedwidth="125"/>
+      <column progid="DecalControls.TextColumn" fixedwidth="245"/>
+      <column progid="DecalControls.TextColumn" fixedwidth="245"/>
+      <column progid="DecalControls.TextColumn" fixedwidth="175"/>
+    </control>
+    <control progid="DecalControls.List" name="lstSpells" left="2" top="70" width="796" height="326" rowheight="18">
+      <column progid="DecalControls.TextColumn" fixedwidth="160"/>
+      <column progid="DecalControls.TextColumn" fixedwidth="230"/>
+      <column progid="DecalControls.TextColumn" fixedwidth="230"/>
+      <column progid="DecalControls.TextColumn" fixedwidth="170"/>
+    </control>
+  </control>
+</view>

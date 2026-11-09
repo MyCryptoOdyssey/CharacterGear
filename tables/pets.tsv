@@ -1,0 +1,282 @@
+# Summoning essences (ACE PetDevice weenies, type 70): name -> pet damage type (PetDevice.PetDeviceToPetMapping) and
+# school = SummoningMastery 362 (1 Primalist, 2 Necromancer, 3 Naturalist, 0 none) from the ACE world DB.
+# 362 is NOT sent in an item ID (not an AssessmentProperty), so the planner takes it from here, keyed by name.
+name	damage	school
+Acid Child Essence (125)	Acid	1
+Acid Child Essence (150)	Acid	1
+Acid Child Essence (180)	Acid	1
+Acid Elemental Essence (100)	Acid	1
+Acid Elemental Essence (50)	Acid	1
+Acid Elemental Essence (80)	Acid	1
+Acid Grievver Essence (100)	Acid	3
+Acid Grievver Essence (125)	Acid	3
+Acid Grievver Essence (150)	Acid	3
+Acid Grievver Essence (180)	Acid	3
+Acid Grievver Essence (50)	Acid	3
+Acid Grievver Essence (80)	Acid	3
+Acid K'nath Essence (100)	Acid	1
+Acid K'nath Essence (125)	Acid	1
+Acid K'nath Essence (150)	Acid	1
+Acid K'nath Essence (180)	Acid	1
+Acid K'nath Essence (50)	Acid	1
+Acid K'nath Essence (80)	Acid	1
+Acid Maiden Essence	Acid	2
+Acid Moar Essence (100)	Acid	3
+Acid Moar Essence (125)	Acid	3
+Acid Moar Essence (150)	Acid	3
+Acid Moar Essence (180)	Acid	3
+Acid Moar Essence (50)	Acid	3
+Acid Moar Essence (80)	Acid	3
+Acid Phyntos Swarm Essence	Acid	3
+Acid Phyntos Wasp Essence (100)	Acid	3
+Acid Phyntos Wasp Essence (125)	Acid	3
+Acid Phyntos Wasp Essence (150)	Acid	3
+Acid Phyntos Wasp Essence (180)	Acid	3
+Acid Phyntos Wasp Essence (50)	Acid	3
+Acid Phyntos Wasp Essence (80)	Acid	3
+Acid Skeleton Bushi Essence (125)	Acid	2
+Acid Skeleton Bushi Essence (150)	Acid	2
+Acid Skeleton Bushi Essence (180)	Acid	2
+Acid Skeleton Minion Essence (100)	Acid	2
+Acid Skeleton Minion Essence (50)	Acid	2
+Acid Skeleton Minion Essence (80)	Acid	2
+Acid Skeleton Samurai Essence	Acid	2
+Acid Spectre Essence (100)	Acid	2
+Acid Spectre Essence (125)	Acid	2
+Acid Spectre Essence (150)	Acid	2
+Acid Spectre Essence (180)	Acid	2
+Acid Spectre Essence (50)	Acid	2
+Acid Spectre Essence (80)	Acid	2
+Acid Wisp Essence (100)	Acid	1
+Acid Wisp Essence (125)	Acid	1
+Acid Wisp Essence (150)	Acid	1
+Acid Wisp Essence (180)	Acid	1
+Acid Wisp Essence (50)	Acid	1
+Acid Wisp Essence (80)	Acid	1
+Acid Zombie Essence (100)	Acid	2
+Acid Zombie Essence (125)	Acid	2
+Acid Zombie Essence (150)	Acid	2
+Acid Zombie Essence (180)	Acid	2
+Acid Zombie Essence (50)	Acid	2
+Acid Zombie Essence (80)	Acid	2
+Amelia's Gargoyle Amulet		0
+Arctic Grievver Essence	Cold	3
+Armoredillo Egg		0
+Baby Drudge Crate		0
+Baby Thrungus Crate		0
+Bag of Gumdrops		0
+Blistered Zombie Essence	Acid	2
+Blistering Moar Essence	Acid	3
+Blizzard Wisp Essence	Cold	1
+Caustic Grievver Essence	Acid	3
+Caustic Knight Essence	Acid	1
+Charred Zombie Essence	Fire	2
+Copper Golem Essence	Bludgeon	0
+Coral Golem Essence	Bludgeon	0
+Corrosion Wisp Essence	Acid	1
+Electrified Moar Essence	Electric	3
+Enchanted Olthoi Egg		0
+Excited Grievver Essence	Electric	3
+Fire Child Essence (125)	Fire	1
+Fire Child Essence (150)	Fire	1
+Fire Child Essence (180)	Fire	1
+Fire Elemental Essence (100)	Fire	1
+Fire Elemental Essence (50)	Fire	1
+Fire Elemental Essence (80)	Fire	1
+Fire Grievver Essence (100)	Fire	3
+Fire Grievver Essence (125)	Fire	3
+Fire Grievver Essence (150)	Fire	3
+Fire Grievver Essence (180)	Fire	3
+Fire Grievver Essence (50)	Fire	3
+Fire Grievver Essence (80)	Fire	3
+Fire K'nath Essence (100)	Fire	1
+Fire K'nath Essence (125)	Fire	1
+Fire K'nath Essence (150)	Fire	1
+Fire K'nath Essence (180)	Fire	1
+Fire K'nath Essence (50)	Fire	1
+Fire K'nath Essence (80)	Fire	1
+Fire Maiden Essence	Fire	2
+Fire Moar Essence (100)	Fire	3
+Fire Moar Essence (125)	Fire	3
+Fire Moar Essence (150)	Fire	3
+Fire Moar Essence (180)	Fire	3
+Fire Moar Essence (50)	Fire	3
+Fire Moar Essence (80)	Fire	3
+Fire Phyntos Swarm Essence	Fire	3
+Fire Phyntos Wasp Essence (100)	Fire	3
+Fire Phyntos Wasp Essence (125)	Fire	3
+Fire Phyntos Wasp Essence (150)	Fire	3
+Fire Phyntos Wasp Essence (180)	Fire	3
+Fire Phyntos Wasp Essence (50)	Fire	3
+Fire Phyntos Wasp Essence (80)	Fire	3
+Fire Skeleton Bushi Essence (125)	Fire	2
+Fire Skeleton Bushi Essence (150)	Fire	2
+Fire Skeleton Bushi Essence (180)	Fire	2
+Fire Skeleton Minion Essence (100)	Fire	2
+Fire Skeleton Minion Essence (50)	Fire	2
+Fire Skeleton Minion Essence (80)	Fire	2
+Fire Skeleton Samurai Essence	Fire	2
+Fire Spectre Essence (100)	Fire	2
+Fire Spectre Essence (125)	Fire	2
+Fire Spectre Essence (150)	Fire	2
+Fire Spectre Essence (180)	Fire	2
+Fire Spectre Essence (50)	Fire	2
+Fire Spectre Essence (80)	Fire	2
+Fire Wisp Essence (100)	Fire	1
+Fire Wisp Essence (125)	Fire	1
+Fire Wisp Essence (150)	Fire	1
+Fire Wisp Essence (180)	Fire	1
+Fire Wisp Essence (50)	Fire	1
+Fire Wisp Essence (80)	Fire	1
+Fire Zombie Essence (100)	Fire	2
+Fire Zombie Essence (125)	Fire	2
+Fire Zombie Essence (150)	Fire	2
+Fire Zombie Essence (180)	Fire	2
+Fire Zombie Essence (50)	Fire	2
+Fire Zombie Essence (80)	Fire	2
+Freezing Moar Essence	Cold	3
+Frigid Zombie Essence	Cold	2
+Frost Child Essence (125)	Cold	1
+Frost Child Essence (150)	Cold	1
+Frost Child Essence (180)	Cold	1
+Frost Elemental Essence (100)	Cold	1
+Frost Elemental Essence (50)	Cold	1
+Frost Elemental Essence (80)	Cold	1
+Frost Grievver Essence (100)	Cold	3
+Frost Grievver Essence (125)	Cold	3
+Frost Grievver Essence (150)	Cold	3
+Frost Grievver Essence (180)	Cold	3
+Frost Grievver Essence (50)	Cold	3
+Frost Grievver Essence (80)	Cold	3
+Frost K'nath Essence (100)	Cold	1
+Frost K'nath Essence (125)	Cold	1
+Frost K'nath Essence (150)	Cold	1
+Frost K'nath Essence (180)	Cold	1
+Frost K'nath Essence (50)	Cold	1
+Frost K'nath Essence (80)	Cold	1
+Frost Maiden Essence	Cold	2
+Frost Moar Essence (100)	Cold	3
+Frost Moar Essence (125)	Cold	3
+Frost Moar Essence (150)	Cold	3
+Frost Moar Essence (180)	Cold	3
+Frost Moar Essence (50)	Cold	3
+Frost Moar Essence (80)	Cold	3
+Frost Phyntos Swarm Essence	Cold	3
+Frost Phyntos Wasp Essence (100)	Cold	3
+Frost Phyntos Wasp Essence (125)	Cold	3
+Frost Phyntos Wasp Essence (150)	Cold	3
+Frost Phyntos Wasp Essence (180)	Cold	3
+Frost Phyntos Wasp Essence (50)	Cold	3
+Frost Phyntos Wasp Essence (80)	Cold	3
+Frost Skeleton Bushi Essence (125)	Cold	2
+Frost Skeleton Bushi Essence (150)	Cold	2
+Frost Skeleton Bushi Essence (180)	Cold	2
+Frost Skeleton Minion Essence (100)	Cold	2
+Frost Skeleton Minion Essence (50)	Cold	2
+Frost Skeleton Minion Essence (80)	Cold	2
+Frost Skeleton Samurai Essence	Cold	2
+Frost Spectre Essence (100)	Cold	2
+Frost Spectre Essence (125)	Cold	2
+Frost Spectre Essence (150)	Cold	2
+Frost Spectre Essence (180)	Cold	2
+Frost Spectre Essence (50)	Cold	2
+Frost Spectre Essence (80)	Cold	2
+Frost Wisp Essence (100)	Cold	1
+Frost Wisp Essence (125)	Cold	1
+Frost Wisp Essence (150)	Cold	1
+Frost Wisp Essence (180)	Cold	1
+Frost Wisp Essence (50)	Cold	1
+Frost Wisp Essence (80)	Cold	1
+Frost Zombie Essence (100)	Cold	2
+Frost Zombie Essence (125)	Cold	2
+Frost Zombie Essence (150)	Cold	2
+Frost Zombie Essence (180)	Cold	2
+Frost Zombie Essence (50)	Cold	2
+Frost Zombie Essence (80)	Cold	2
+Galvanic Knight Essence	Electric	1
+Glacial Knight Essence	Cold	1
+Gold Golem Essence	Bludgeon	0
+Inactive Alchemist's Golem		0
+Inactive Blank Golem		0
+Inactive Cook's Golem		0
+Inactive Fletcher's Golem		0
+Inactive Fletcher's Golem.		0
+Inactive Lockpicker's Golem		0
+Incendiary Knight Essence	Fire	1
+Incendiary Wisp Essence	Fire	1
+Iron Golem Essence	Bludgeon	0
+K'nath B'orret Essence	Fire	1
+K'nath R'ajed Essence	Cold	1
+K'nath T'soct Essence	Electric	1
+K'nath Y'nda Essence	Acid	1
+Lightning Child Essence (125)	Electric	1
+Lightning Child Essence (150)	Electric	1
+Lightning Child Essence (180)	Electric	1
+Lightning Elemental Essence (100)	Electric	1
+Lightning Elemental Essence (50)	Electric	1
+Lightning Elemental Essence (80)	Electric	1
+Lightning Grievver Essence (100)	Electric	3
+Lightning Grievver Essence (125)	Electric	3
+Lightning Grievver Essence (150)	Electric	3
+Lightning Grievver Essence (180)	Electric	3
+Lightning Grievver Essence (50)	Electric	3
+Lightning Grievver Essence (80)	Electric	3
+Lightning K'nath Essence (100)	Electric	1
+Lightning K'nath Essence (125)	Electric	1
+Lightning K'nath Essence (150)	Electric	1
+Lightning K'nath Essence (180)	Electric	1
+Lightning K'nath Essence (50)	Electric	1
+Lightning K'nath Essence (80)	Electric	1
+Lightning Maiden Essence	Electric	2
+Lightning Moar Essence (100)	Electric	3
+Lightning Moar Essence (125)	Electric	3
+Lightning Moar Essence (150)	Electric	3
+Lightning Moar Essence (180)	Electric	3
+Lightning Moar Essence (50)	Electric	3
+Lightning Moar Essence (80)	Electric	3
+Lightning Phyntos Swarm Essence	Electric	3
+Lightning Phyntos Wasp Essence (100)	Electric	3
+Lightning Phyntos Wasp Essence (125)	Electric	3
+Lightning Phyntos Wasp Essence (150)	Electric	3
+Lightning Phyntos Wasp Essence (180)	Electric	3
+Lightning Phyntos Wasp Essence (50)	Electric	3
+Lightning Phyntos Wasp Essence (80)	Electric	3
+Lightning Skeleton Bushi Essence (125)	Electric	2
+Lightning Skeleton Bushi Essence (150)	Electric	2
+Lightning Skeleton Bushi Essence (180)	Electric	2
+Lightning Skeleton Minion Essence (100)	Electric	2
+Lightning Skeleton Minion Essence (50)	Electric	2
+Lightning Skeleton Minion Essence (80)	Electric	2
+Lightning Skeleton Samurai Essence	Electric	2
+Lightning Spectre Essence (100)	Electric	2
+Lightning Spectre Essence (125)	Electric	2
+Lightning Spectre Essence (150)	Electric	2
+Lightning Spectre Essence (180)	Electric	2
+Lightning Spectre Essence (50)	Electric	2
+Lightning Spectre Essence (80)	Electric	2
+Lightning Wisp Essence (100)	Electric	1
+Lightning Wisp Essence (125)	Electric	1
+Lightning Wisp Essence (150)	Electric	1
+Lightning Wisp Essence (180)	Electric	1
+Lightning Wisp Essence (50)	Electric	1
+Lightning Wisp Essence (80)	Electric	1
+Lightning Zombie Essence (100)	Electric	2
+Lightning Zombie Essence (125)	Electric	2
+Lightning Zombie Essence (150)	Electric	2
+Lightning Zombie Essence (180)	Electric	2
+Lightning Zombie Essence (50)	Electric	2
+Lightning Zombie Essence (80)	Electric	2
+Magic Hat		0
+Mud Golem Essence	Bludgeon	0
+Oak Golem Essence	Bludgeon	0
+Pet Mouf Igloo		0
+Pet Penguin Igloo		0
+Polar Ursuin Lair		0
+Sandstone Golem Essence	Bludgeon	0
+Scorched Grievver Essence	Fire	3
+Shocked Zombie Essence	Electric	2
+Snow Tuskie Kennel		0
+Sprouting Pumpkin Vine		0
+Ursuin Cub Kennel		0
+Volcanic Moar Essence	Fire	3
+Voltaic Wisp Essence	Electric	1

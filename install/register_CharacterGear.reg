@@ -1,0 +1,10 @@
+Windows Registry Editor Version 5.00
+
+; Registers CharacterGear with Decal (same layout as other .NET Decal plugins).
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Decal\Plugins\{A53FCECD-A272-433B-8198-DC8FB7A4E1D4}]
+@="CharacterGear"
+"Enabled"=dword:00000001
+"Assembly"="CharacterGear.dll"
+"Path"="C:\\Games\\Decal Plugins\\CharacterGear"
+"Object"="CharacterGear.PluginCore"
+"Surrogate"="{71A69713-6593-47EC-0002-0000000DECA1}"

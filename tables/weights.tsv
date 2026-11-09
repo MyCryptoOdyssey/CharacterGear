@@ -1,0 +1,103 @@
+# CharacterGear scoring weights (points per unit). The planner copies this file to data\CharacterGear_weights.tsv
+# on first run; edit THAT copy to tune, then run the planner again.
+# keys: defense = points per 1% less physical damage taken (armor per body part weighted by hit odds, level 7
+#         Armor Self, damage resist, crit resist, crit damage resist - all with ACE's formulas)
+#       offense = points per 1% more damage dealt from damage, crit and crit damage ratings (ACE formulas)
+#       skill_<id> / attr_<id> = per point added by a spell on worn gear or a set bonus (normal-level spells count only
+#       above the assumed level 7 buff of +40; cantrips and rare spells always count)
+#       rating_376 / rating_379 = per point of Heal boost / Vitality rating (the other ratings are inside offense/defense)
+#       hit_margin = how far an assumed monster's defense sits below your weapon skill x 1.17 (50 = ~82% hits);
+#       evade_margin = same for its attack vs your Melee Defense x 1.17 (0 = 50% evades); monster_al = monster armor
+#       for armor rending; ammo_damage = assumed arrow/bolt max damage for missile launchers.
+#       Weapon skill and Melee Defense count through hit/evade chance (ACE SkillCheck), not as flat points.
+#       other = per cantrip tier (Minor 1, Major 2, Epic 3, Legendary 4) for any other cantrip (wards, vitals...)
+# Skill ids: 6 Melee D, 7 Missile D, 15 Magic D, 14 Arcane, 34 War, 43 Void, 41 Two-handed, 44 Heavy, 45 Light,
+#            46 Finesse, 47 Missile, 48 Shield, 49 Dual wield, 50 Recklessness, 51 Sneak attack, 52 Dirty fighting
+# Attribute ids: 1 Strength, 2 Endurance, 3 Quickness, 4 Coordination, 5 Focus, 6 Self
+# Profile "all" applies to every profile unless the profile sets the same key. A combined profile like
+# war+summoning uses the highest value any of its parts sets. Profiles: twohanded heavy light finesse missile war
+# void life tinker crafter, extras summoning dualwield.
+# dmg_slash ... dmg_lightning = damage-type mix the suit is scored against (relative; default 1 each = all types equal, the end goal being Legendary ward coverage for every type)
+# spell_share = part of elemental damage that comes as spells (armor doesn't stop spells; protections and wards do). Default 0.5
+# attack_seconds = time between attacks, for Aetheria surge uptime (default 2); surge_other = points per sigil level for
+#   surges that aren't ratings (Regeneration, Affliction, Festering; default 2)
+profile	key	weight
+all	attack_seconds	2
+all	surge_other	2
+all	dmg_slash	1
+all	dmg_pierce	1
+all	dmg_bludgeon	1
+all	dmg_cold	1
+all	dmg_fire	1
+all	dmg_acid	1
+all	dmg_lightning	1
+all	spell_share	0.5
+all	defense	6
+all	offense	6
+all	hit_margin	50
+all	evade_margin	0
+all	monster_al	200
+all	ammo_damage	30
+all	skill_6	0.8
+all	skill_7	0.5
+all	skill_15	0.8
+all	attr_2	0.3
+all	rating_376	1
+all	rating_379	2
+all	other	1.5
+all	skill_50	0.4
+all	skill_52	0.3
+all	skill_51	0.3
+heavy	skill_44	1
+heavy	attr_1	0.5
+heavy	attr_4	0.4
+light	skill_45	1
+light	attr_1	0.4
+light	attr_4	0.4
+light	attr_3	0.3
+finesse	skill_46	1
+finesse	attr_3	0.5
+finesse	attr_4	0.4
+twohanded	skill_41	1
+twohanded	attr_1	0.5
+twohanded	attr_4	0.4
+missile	skill_47	1
+missile	attr_4	0.6
+war	skill_34	1
+war	attr_5	0.4
+war	attr_6	0.4
+war	skill_15	1
+void	skill_43	1
+void	attr_5	0.4
+void	attr_6	0.4
+void	skill_15	1
+life	skill_33	1
+life	attr_5	0.4
+life	attr_6	0.4
+life	skill_15	1
+war	skill_16	0.4
+void	skill_16	0.4
+life	skill_16	0.4
+summoning	skill_54	1.2
+summoning	attr_2	0.4
+summoning	attr_6	0.4
+dualwield	skill_49	0.8
+dualwield	attr_4	0.5
+tinker	offense	0
+tinker	defense	1
+tinker	skill_18	1
+tinker	skill_28	1
+tinker	skill_29	1
+tinker	skill_30	1
+tinker	skill_40	0.6
+tinker	attr_5	0.4
+tinker	attr_4	0.2
+crafter	offense	0
+crafter	defense	1
+crafter	skill_37	1
+crafter	skill_38	1
+crafter	skill_39	1
+crafter	skill_23	0.5
+crafter	skill_36	0.3
+crafter	attr_4	0.3
+crafter	attr_5	0.3

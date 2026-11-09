@@ -1,0 +1,93 @@
+# End-game templates: what a finished suit aims for, per archetype. Edit to match your own goals.
+# kind: skill / attr = a cantrip raising that skill or attribute (want = Minor, Major, Epic or Legendary)
+# rule (6th column, optional): iftrained = only for characters with that skill trained/specialized;
+#       optional = nice to have, not counted in "n of m done". Both: iftrained,optional
+# Choices: Impregnability dropped everywhere (nerfed, never a priority); Healing = nice-to-have Legendary on
+# melee types when trained; Sneak Attack / Recklessness / Dirty Fighting = Legendary when trained; Tinker/Crafter
+# targets are built from the character's own trained tinkering/crafting skills + the attributes that feed them.
+#       armor = Armor cantrip (whole body)
+# A combined profile (e.g. war+summoning) uses the rows of every part. Ids: see weights.tsv.
+profile	kind	key	want	label
+twohanded	skill	41	Legendary	Two Handed Combat
+twohanded	skill	6	Legendary	Melee Defense (Invulnerability)
+twohanded	skill	15	Legendary	Magic Defense (Magic Resistance)
+twohanded	attr	1	Legendary	Strength
+twohanded	attr	2	Legendary	Endurance
+twohanded	attr	4	Legendary	Coordination
+twohanded	attr	3	Legendary	Quickness
+twohanded	armor	0	Legendary	Armor
+heavy	skill	44	Legendary	Heavy Weapons
+heavy	skill	6	Legendary	Melee Defense (Invulnerability)
+heavy	skill	15	Legendary	Magic Defense (Magic Resistance)
+heavy	attr	1	Legendary	Strength
+heavy	attr	2	Legendary	Endurance
+heavy	attr	4	Legendary	Coordination
+heavy	attr	3	Legendary	Quickness
+heavy	armor	0	Legendary	Armor
+light	skill	45	Legendary	Light Weapons
+light	skill	6	Legendary	Melee Defense (Invulnerability)
+light	skill	15	Legendary	Magic Defense (Magic Resistance)
+light	attr	1	Legendary	Strength
+light	attr	4	Legendary	Coordination
+light	attr	3	Legendary	Quickness
+light	attr	2	Legendary	Endurance
+light	armor	0	Legendary	Armor
+finesse	skill	46	Legendary	Finesse Weapons
+finesse	skill	6	Legendary	Melee Defense (Invulnerability)
+finesse	skill	15	Legendary	Magic Defense (Magic Resistance)
+finesse	attr	3	Legendary	Quickness
+finesse	attr	4	Legendary	Coordination
+finesse	attr	2	Legendary	Endurance
+finesse	armor	0	Legendary	Armor
+dualwield	skill	49	Legendary	Dual Wield
+missile	skill	47	Legendary	Missile Weapons
+missile	skill	6	Legendary	Melee Defense (Invulnerability)
+missile	skill	15	Legendary	Magic Defense (Magic Resistance)
+missile	attr	4	Legendary	Coordination
+missile	attr	3	Legendary	Quickness
+missile	attr	2	Legendary	Endurance
+missile	armor	0	Legendary	Armor
+war	skill	34	Legendary	War Magic
+war	skill	16	Legendary	Mana Conversion
+war	skill	15	Legendary	Magic Defense (Magic Resistance)
+war	skill	6	Legendary	Melee Defense (Invulnerability)
+war	attr	5	Legendary	Focus
+war	attr	6	Legendary	Willpower (Self)
+war	attr	2	Legendary	Endurance
+war	armor	0	Legendary	Armor
+void	skill	43	Legendary	Void Magic
+void	skill	16	Legendary	Mana Conversion
+void	skill	15	Legendary	Magic Defense (Magic Resistance)
+void	skill	6	Legendary	Melee Defense (Invulnerability)
+void	attr	5	Legendary	Focus
+void	attr	6	Legendary	Willpower (Self)
+void	attr	2	Legendary	Endurance
+void	armor	0	Legendary	Armor
+life	skill	33	Legendary	Life Magic
+life	skill	16	Legendary	Mana Conversion
+life	skill	15	Legendary	Magic Defense (Magic Resistance)
+life	skill	6	Legendary	Melee Defense (Invulnerability)
+life	attr	5	Legendary	Focus
+life	attr	6	Legendary	Willpower (Self)
+life	attr	2	Legendary	Endurance
+life	armor	0	Legendary	Armor
+summoning	skill	54	Legendary	Summoning
+summoning	attr	2	Legendary	Endurance
+summoning	attr	6	Legendary	Willpower (Self)
+# Every profile: a Legendary ward for each damage type (full Legendary coverage is the end goal).
+all	ward	64	Legendary	Slashing Ward
+all	ward	65	Legendary	Piercing Ward
+all	ward	66	Legendary	Bludgeoning Ward
+all	ward	68	Legendary	Frost Ward
+all	ward	67	Legendary	Flame Ward
+all	ward	69	Legendary	Acid Ward
+all	ward	70	Legendary	Storm Ward
+# Melee: Healing, nice to have when trained
+twohanded	skill	21	Legendary	Healing	iftrained,optional
+heavy	skill	21	Legendary	Healing	iftrained,optional
+light	skill	21	Legendary	Healing	iftrained,optional
+finesse	skill	21	Legendary	Healing	iftrained,optional
+# Any character: these when trained
+all	skill	51	Legendary	Sneak Attack	iftrained
+all	skill	50	Legendary	Recklessness	iftrained
+all	skill	52	Legendary	Dirty Fighting	iftrained
