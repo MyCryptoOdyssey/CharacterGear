@@ -40,6 +40,11 @@ equips, uses, gives, drops, splits or sells anything, and sends no chat commands
 - **Wield and activation rules follow the server** (ACEmulator): wield requirements, Arcane Lore and other activation
   requirements, old weapon skills mapped to the current ones, set bonuses by piece count (or item level for
   Aetheria and cloaks), enchantment stacking, armor per body part with hit odds, ratings, shields, dual wield.
+- **Gear another character is wearing is not offered** to the others (packs, mules and house chests are);
+  `/cg wornbyothers on` allows it.
+- **Aetheria:** Destruction first up to a summed sigil level of 10 (where its bonus maxes out), then Defense or
+  Growth; surges Destruction > Protection > Regeneration. Surges and cloak procs count by their chance, not as
+  always-on spells.
 - **Profiles** are detected from trained skills (two-handed, heavy, light, finesse, missile, war, void, life,
   tinker, crafter, plus summoning or dual wield). Override them in `data\CharacterGear_profiles.tsv`.
 - **Weights** for each profile live in `data\CharacterGear_weights.tsv` (created on first run). Edit and rerun.
@@ -57,7 +62,7 @@ equips, uses, gives, drops, splits or sells anything, and sends no chat commands
 Log in each character (mules too) once so it is scanned. Open a house chest to add its contents.
 
 **Commands:** `/cg status`, `/cg scan`, `/cg rec`, `/cg plan`, `/cg track on|off|default`, `/cg trackall on|off`,
-`/cg history on|off`, `/cg chests on|off`, `/cg chest name <label>`.
+`/cg history on|off`, `/cg chests on|off`, `/cg chest name <label>`, `/cg wornbyothers on|off`.
 
 ## Build
 

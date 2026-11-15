@@ -117,6 +117,15 @@ namespace CharacterGear
         string SettingsPath { get { return System.IO.Path.Combine(PluginDir, "settings.txt"); } }
         internal string SettingsFile { get { return SettingsPath; } }
 
+        // Gear other characters are wearing: off-limits by default; /cg wornbyothers on lets the planner use it.
+        internal bool WornByOthers { get { return Util.Get(Util.ReadKv(SettingsPath), "WornByOthers") == "1"; } }
+        void SetWornByOthers(bool on)
+        {
+            var d = Util.ReadKv(SettingsPath); d["WornByOthers"] = on ? "1" : "0"; Util.WriteKv(SettingsPath, d);
+            Chat("Gear other characters are wearing: " + (on ? "CAN be recommended" : "NOT recommended (default)") + ". Updating recommendations...");
+            Rec.RunPlanner(true);
+        }
+
         // House chest snapshots. Default ON; /cg chests on|off
         internal bool ChestsOn { get { return Util.Get(Util.ReadKv(SettingsPath), "Chests") != "0"; } }
         void SetChests(bool on)
@@ -213,7 +222,7 @@ namespace CharacterGear
                 if (cmd == "status")
                 {
                     Chat((Tracked ? "Tracked" : "NOT tracked") + " " + (TrackOverride == "" ? "(follows Track all)" : "(set for this character)") +
-                         " | Track all " + (TrackAll ? "ON" : "OFF") + " | History " + (HistoryOn ? "ON" : "OFF") + " | Chests " + (ChestsOn ? "ON" : "OFF") + " | " + Scanner.StatusText + " | " + Scanner.SavedText);
+                         " | Track all " + (TrackAll ? "ON" : "OFF") + " | History " + (HistoryOn ? "ON" : "OFF") + " | Chests " + (ChestsOn ? "ON" : "OFF") + " | Worn-by-others " + (WornByOthers ? "usable" : "excluded") + " | " + Scanner.StatusText + " | " + Scanner.SavedText);
                     Chat("File: " + Scanner.DataPath + " | ID answers decoded: " + Appraisal.Parsed + (Appraisal.Failed > 0 ? ", failed: " + Appraisal.Failed : ""));
                 }
                 else if (cmd == "scan") ScanNow();
@@ -223,13 +232,14 @@ namespace CharacterGear
                 else if (cmd == "trackall" && (arg == "on" || arg == "off")) SetTrackAll(arg == "on");
                 else if (cmd == "history" && (arg == "on" || arg == "off")) SetHistory(arg == "on");
                 else if (cmd == "chests" && (arg == "on" || arg == "off")) SetChests(arg == "on");
+                else if (cmd == "wornbyothers" && (arg == "on" || arg == "off")) SetWornByOthers(arg == "on");
                 else if (cmd == "chest" && arg == "name")
                 {
                     int at = lower.IndexOf(" name", StringComparison.Ordinal);
                     Chests.Rename(at >= 0 ? t.Substring(at + 5) : "");   // original capitals kept
                 }
                 else if (cmd == "chest") Chat(Chests.StatusText != "" ? Chests.StatusText : "No house chest open." + (Chests.LastChest != 0 ? " Last: " + Chests.LabelOf(Chests.LastChest) : "") + " Rename while open: /cg chest name <label>");
-                else Chat("/cg status | /cg scan | /cg track on|off|default | /cg trackall on|off | /cg history on|off | /cg chests on|off | /cg chest name <label>   (read-only: IDs items, never moves or uses them)");
+                else Chat("/cg status | /cg scan | /cg track on|off|default | /cg trackall on|off | /cg history on|off | /cg chests on|off | /cg chest name <label> | /cg wornbyothers on|off   (read-only: IDs items, never moves or uses them)");
             });
         }
 

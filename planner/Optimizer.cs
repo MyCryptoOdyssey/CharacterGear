@@ -189,6 +189,10 @@ namespace CharacterGear.Planner
             return res;
         }
 
+        // An item's proc spell (Aetheria surge, cloak proc: DID 55 ProcSpell) is listed among its spells but only fires
+        // by chance - it is scored by the proc model, never as an always-on spell.
+        static IEnumerable<int> Passive(Item it) { long proc = it.Did(55); return proc == 0 ? (IEnumerable<int>)it.OwnSpells : it.OwnSpells.Where(id => id != proc); }
+
         SuitScore ScoreUncached(List<Choice> suit)
         {
             var s = new SuitScore();
@@ -209,7 +213,7 @@ namespace CharacterGear.Planner
             for (int round = 0; round < 4; round++)
             {
                 var ids = new List<int>();
-                foreach (var ch in gear) { var m = SuitMagic(ch.V, arcane); s.MagicOf[ch.V] = m; if (m == Magic.On || m == Magic.WithCrystal) ids.AddRange(ch.V.Item.OwnSpells); }
+                foreach (var ch in gear) { var m = SuitMagic(ch.V, arcane); s.MagicOf[ch.V] = m; if (m == Magic.On || m == Magic.WithCrystal) ids.AddRange(Passive(ch.V.Item)); }
                 ids.AddRange(SetSpellsOf(gear));
                 double next = ArcaneFrom(ids);
                 if (Math.Abs(next - arcane) < 0.5) break;
@@ -220,7 +224,7 @@ namespace CharacterGear.Planner
             {
                 var v = ch.V;
                 Magic mg; s.MagicOf.TryGetValue(v, out mg);
-                if (mg == Magic.On || mg == Magic.WithCrystal) spells.AddRange(v.Item.OwnSpells);
+                if (mg == Magic.On || mg == Magic.WithCrystal) spells.AddRange(Passive(v.Item));
                 long set = v.Item.Int(265);
                 if (set > 0) { int n; setCounts.TryGetValue(set, out n); setCounts[set] = n + v.Item.SetWeight; }
             }
@@ -288,17 +292,31 @@ namespace CharacterGear.Planner
                 double rate = ch.V.Item.ItemLevel * 0.01 * (IsCaster ? 2.0 : IsMissile ? 1.5 : 1.0);
                 double secs = Math.Max(0.5, W.GetOr(Profile, "attack_seconds", 2.0));
                 double up = 1 - Math.Pow(1 - Math.Min(1, rate), Math.Max(1, sp.Duration / secs));
+                // Surge preference: Destruction, then Protection, then Regeneration; Affliction/Festering add nothing.
+                double pref = proc == 5204 ? W.GetOr(Profile, "surge_destruction", 3) : proc == 5206 ? W.GetOr(Profile, "surge_protection", 2)
+                            : proc == 5208 ? W.GetOr(Profile, "surge_regeneration", 1) : 0;
+                double ppts = ch.V.Item.ItemLevel * pref;
+                s.Sets += ppts;
                 if (sp.StatKey == 307 || sp.StatKey == 308)
                 {
                     rating[sp.StatKey] += sp.Value * up;
-                    s.SpellLines.Add(sp.Name + " (" + Math.Round(rate * 100) + "% per attack, ~" + Math.Round(up * 100) + "% uptime)");
+                    s.SpellLines.Add(sp.Name + " (" + Math.Round(rate * 100) + "% per attack, ~" + Math.Round(up * 100) + "% uptime) +" + Math.Round(ppts, 1));
                 }
-                else
+                else s.SpellLines.Add(sp.Name + " (" + Math.Round(rate * 100) + "% per attack)" + (ppts > 0 ? " +" + Math.Round(ppts, 1) : ""));
+            }
+            // Aetheria sigil priority: Destruction first up to summed level 10 (its set maxes out there), then
+            // Defense or Growth (the higher level wins) for the rest; Fury and Vigor last. Points per sigil level.
+            {
+                var lv = new Dictionary<long, int>();
+                foreach (var ch in gear)
                 {
-                    double pts = ch.V.Item.ItemLevel * W.GetOr(Profile, "surge_other", 2.0);
-                    s.Ratings += pts;
-                    s.SpellLines.Add(sp.Name + " (" + Math.Round(rate * 100) + "% per attack) +" + Math.Round(pts, 1));
+                    if (SigilIndex(ch.V.Item) < 0) continue;
+                    long set = ch.V.Item.Int(265); int x; lv.TryGetValue(set, out x); lv[set] = x + ch.V.Item.ItemLevel;
                 }
+                Func<long, int> L = id => { int x; return lv.TryGetValue(id, out x) ? x : 0; };
+                int dest = Math.Min(10, L(36)), sec = Math.Min(10, L(35) + L(38)), other = L(37) + L(39);
+                double apts = dest * W.GetOr(Profile, "aeth_destruction", 30) + sec * W.GetOr(Profile, "aeth_secondary", 15) + other * W.GetOr(Profile, "aeth_other", 3);
+                if (apts > 0) { s.Sets += apts; s.SpellLines.Add("Aetheria priority (Destruction " + dest + "/10, Defense+Growth " + sec + ", other " + other + ") +" + Math.Round(apts)); }
             }
             double D = rating[307], DR = rating[308], CR = rating[313], CD = rating[314], CRR = rating[315], CDR = rating[316];
 

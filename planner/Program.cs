@@ -30,6 +30,12 @@ namespace CharacterGear.Planner
             try { got = mutex.WaitOne(60000); } catch (System.Threading.AbandonedMutexException) { got = true; }
             if (!got) { Console.WriteLine("Another planner is still running."); return 2; }
             Tables.Load();
+            try
+            {
+                string set = Path.Combine(Path.GetDirectoryName(Path.GetFullPath(data).TrimEnd('\\', '/')), "settings.txt");
+                if (File.Exists(set)) foreach (string line in File.ReadAllLines(set)) if (line.Trim() == "WornByOthers=1") Report.AllowWornByOthers = true;
+            }
+            catch { }
             var weights = Weights.Load(data);
             int made = 0;
             foreach (string serverDir in Directory.GetDirectories(data))

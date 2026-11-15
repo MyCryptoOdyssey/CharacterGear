@@ -21,9 +21,16 @@
 # spell_share = part of elemental damage that comes as spells (armor doesn't stop spells; protections and wards do). Default 0.5
 # attack_seconds = time between attacks, for Aetheria surge uptime (default 2); surge_other = points per sigil level for
 #   surges that aren't ratings (Regeneration, Affliction, Festering; default 2)
+# Aetheria priority (points per sigil level): aeth_destruction (up to summed level 10) 30, aeth_secondary (Defense +
+#   Growth, up to 10) 15, aeth_other (Fury, Vigor) 3; surges: surge_destruction 3, surge_protection 2, surge_regeneration 1
 profile	key	weight
+all	aeth_destruction	30
+all	aeth_secondary	15
+all	aeth_other	3
+all	surge_destruction	3
+all	surge_protection	2
+all	surge_regeneration	1
 all	attack_seconds	2
-all	surge_other	2
 all	dmg_slash	1
 all	dmg_pierce	1
 all	dmg_bludgeon	1

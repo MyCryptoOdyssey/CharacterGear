@@ -44,6 +44,8 @@ namespace CharacterGear.Planner
         public static readonly Dictionary<string, string[]> RecHead = new Dictionary<string, string[]>();
         // "#suit" line: the recommended pieces (id:mask) so a quick refresh can start from them.
         public static readonly Dictionary<string, string> RecSuit = new Dictionary<string, string>();
+        // Gear another character is WEARING is off-limits. Plugin setting WornByOthers=1 allows it.
+        public static bool AllowWornByOthers;
         public static readonly Dictionary<string, List<KeyValuePair<string, long>>> Warm = new Dictionary<string, List<KeyValuePair<string, long>>>();
         static void AddRec(string who, string tab, string slot, string item, string holder, string todo, string why = "")
         {
@@ -140,7 +142,8 @@ namespace CharacterGear.Planner
                 sb.Append("<tr><td>Arcane Lore with Scholar's Crystal</td><td></td><td></td><td></td><td><b>" + rules.Skill(14, true) + "</b></td></tr>");
                 sb.Append("</table></details>");
 
-                var verdicts = all.Select(i => rules.Judge(i)).ToList();
+                var pool = AllowWornByOthers ? all : all.Where(i => !(i.Where == "equipped" && i.Holder != c.Name)).ToList();
+                var verdicts = pool.Select(i => rules.Judge(i)).ToList();
                 int usable = verdicts.Count(v => v.Usable);
                 sb.Append("<p class=\"meta\">" + usable + " of " + verdicts.Count + " pieces wieldable.</p>");
                 SuitSection(sb, c, rules, weights, verdicts);
